@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: 1s ease-in-out all 0.5s;
+}
+
+div:hover {
+    transform: translate(30px);
+}
+
+div.container {
+    height: 400px;
+    width: 500px;
+    background-color: black;
+}
+
+div.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffbf00ed;
+    animation-duration: 2s;
+    animation-name: motion;
+    animation-iteration-count: infinite;
+}
+
+@keyframes motion {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(100px, 100px);
+    }
+
+    50% {
+        transform: translate(0, 350px);
+    }
+
+    75% {
+        transform: translate(100px, 350px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
