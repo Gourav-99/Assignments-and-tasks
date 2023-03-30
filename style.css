@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /* background: #42caff;
+    background: linear-gradient(90deg, #42caff 0%, #e81aff 100%); */
+    /* background: url("https://64.media.tumblr.com/20b34e8d12d4230f9b362d7feb148c57/tumblr_oiwytz4dh41tf8vylo1_1280.pnj"); */
+    background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+}
+
+div.container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    padding-bottom: 10px;
+}
+
+header {
+    background-color: #fff;
+    width: 100%;
+}
+
+header .heading-main {
+
+    padding: 8px;
+}
+
+section {
+    color: #fff;
+}
+
+
+section.scoring {
+    width: 150px;
+    border: 2px solid #fff;
+    padding: 10px 0;
+    margin: 10px 0 0;
+}
+
+div.score {
+
+    position: relative;
+}
+
+div.player p {
+    background-color: red;
+    padding: 1px 5px;
+}
+
+div.player {
+    position: absolute;
+    bottom: -40%;
+}
+
+div.user {
+    left: -20%;
+}
+
+div.comp {
+    right: -20%;
+}
+
+section.game-play {
+    margin: 10px 0 0;
+}
+
+
+div.choices {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+div.option {
+    margin: 15px;
+    width: 170px;
+    height: 170px;
+    background: #fff;
+    padding: 35px;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+    transition-timing-function: step-start;
+    cursor: pointer;
+}
+
+div.option:hover {
+    transform: scale(1.25);
+}
+
+div.option:hover>img {
+    animation: infinite-rotate 2s linear infinite;
+}
+
+div.option img {
+    width: 100%;
+    box-shadow: -1px 2px #302e2e;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+div.option .op-title {
+    display: none;
+    color: purple;
+    font-size: 14px;
+}
+
+div.option:hover>.op-title {
+    display: block;
+}
+
+@keyframes infinite-rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+
+}
