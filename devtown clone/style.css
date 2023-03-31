@@ -1,116 +1,115 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .container {
-    background: linear-gradient(to right, #5C258D, #4389A2);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: linear-gradient(to right, #5c258d, #4389a2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .left-portion {
-    width: 432px;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 40px;
-    border-radius: 8px;
+  width: 432px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 40px;
+  border-radius: 8px;
 }
 
 .left-portion .logo {
-    width: 48px;
-    margin: 0 auto;
+  width: 48px;
+  margin: 0 auto;
 }
 
 .welcome-msg {
-    font-size: 30px;
-    font-weight: 700;
-    margin-top: 24px;
-    line-height: 1.5;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 24px;
+  line-height: 1.5;
 }
 
 .welcome-msg span {
-    color: #6422CD;
+  color: #6422cd;
 }
 
 .login-msg {
-    margin-top: 24px;
-    font-size: 16px;
-    line-height: 1.5;
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 form.login {
-
-    margin-top: 32px;
-    font-size: 14px;
+  margin-top: 32px;
+  font-size: 14px;
 }
 
 .login .input-fields input {
-    width: 100%;
-    padding: 8px 12px;
-    border-radius: 5px;
-    border: 1px solid rgb(209 213 219);
-    outline: none;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid rgb(209 213 219);
+  outline: none;
 }
 
 input#email {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .login .input-fields input:focus {
-    border-color: #6366f1;
+  border-color: #6366f1;
 }
 
 .login .password {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .password svg {
-    width: 32px;
-    padding: 4px;
-    border: 1px solid rgb(209 213 219);
-    border-left: none;
-    border-radius: 5px;
+  width: 32px;
+  padding: 4px;
+  border: 1px solid rgb(209 213 219);
+  border-left: none;
+  border-radius: 5px;
 }
 
 .login .forget-pass {
-    margin-top: 24px;
-    color: #4f46E5;
-    text-align: end;
+  margin-top: 24px;
+  color: #4f46e5;
+  text-align: end;
 }
 
 .login .forget-pass:hover {
-    color: #6663f1;
+  color: #6663f1;
 }
 
 .login button {
-    width: 100%;
-    color: white;
-    font-weight: 500;
-    padding: 8px 16px;
-    background: #4f46E5;
-    border: 1px transparent;
-    border-radius: 6px;
-    margin-top: 24px;
-    cursor: pointer;
+  width: 100%;
+  color: white;
+  font-weight: 500;
+  padding: 8px 16px;
+  background: #4f46e5;
+  border: 1px transparent;
+  border-radius: 6px;
+  margin-top: 24px;
+  cursor: pointer;
 }
 
 .login button:hover {
-    background: #4338ca;
+  background: #4338ca;
 }
