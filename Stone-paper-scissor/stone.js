@@ -4,6 +4,9 @@ class Stone {
     this.clickEvent();
     this.selectedOp;
     this.randomOption;
+    this.result = document.querySelector(".game-play .winner");
+    this.userScore = document.querySelector(".user-score");
+    this.compScore = document.querySelector(".comp-score");
   }
 
   compChoice = () => {
@@ -26,7 +29,6 @@ class Stone {
   };
 
   getWinner = (compOp, userOp) => {
-    const result = document.querySelector(".game-play .winner");
     let winner, message;
 
     if (compOp === userOp) {
@@ -38,48 +40,53 @@ class Stone {
       (compOp === "scissor" && userOp === "paper")
     ) {
       winner = "comp";
-      message = `${compOp} ${
-        compOp === "rock" ? "breaks" : compOp === "paper" ? "covers" : "cuts"
-      } ${userOp}, Computer wins!`;
+      message = `${compOp} ${this.getWinningVerb(
+        compOp
+      )} ${userOp}, Computer wins!`;
     } else {
       winner = "user";
-      message = `${userOp} ${
-        userOp === "rock" ? "breaks" : userOp === "paper" ? "covers" : "cuts"
-      } ${compOp}, User wins!`;
+      message = `${userOp} ${this.getWinningVerb(
+        userOp
+      )} ${compOp}, User wins!`;
     }
 
-    result.textContent = message;
+    this.result.textContent = message;
     this.updateScore(winner);
   };
 
+  getWinningVerb = (option) => {
+    if (option === "rock") {
+      return "breaks";
+    } else if (option === "paper") {
+      return "covers";
+    } else {
+      return "cuts";
+    }
+  };
+
   updateScore = (winner) => {
-    const user = document.querySelector(".user-score");
-    const comp = document.querySelector(".comp-score");
-    let userScore = parseInt(user.getAttribute("score"));
-    let compScore = parseInt(comp.getAttribute("score"));
+    let userScore = parseInt(this.userScore.getAttribute("score"));
+    let compScore = parseInt(this.compScore.getAttribute("score"));
 
     if (winner === "comp") {
       compScore++;
-      comp.setAttribute("score", compScore);
-      comp.textContent = compScore;
+      this.compScore.setAttribute("score", compScore);
+      this.compScore.textContent = compScore;
     } else if (winner === "user") {
       userScore++;
-      user.setAttribute("score", userScore);
-      user.textContent = userScore;
+      this.userScore.setAttribute("score", userScore);
+      this.userScore.textContent = userScore;
     }
 
     this.compChoice();
   };
+
   reset = () => {
-    const result = document.querySelector(".game-play .winner");
-    const user = document.querySelector(".user-score");
-    const comp = document.querySelector(".comp-score");
-    user.textContent = "0";
-    user.setAttribute("score", "0");
-    comp.textContent = "0";
-    comp.setAttribute("score", "0");
-    result.textContent = "Let's start playing";
+    this.userScore.textContent = 0;
+    this.compScore.textContent = 0;
+    this.userScore.setAttribute("score", 0);
+    this.compScore.setAttribute("score", 0);
+    this.result.textContent = "";
   };
 }
-
 new Stone();
