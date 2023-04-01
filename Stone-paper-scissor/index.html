@@ -15,7 +15,7 @@
         </header>
         <section class="scoring">
             <div class="score">
-                <p class="counter">0:0</p>
+                <p class="counter"><span class="user-score" score="0">0</span>:<span class="comp-score" score="0">0</span></p>
                 <div class="player user">
                     <p>user</p>
                 </div>
@@ -25,24 +25,30 @@
             </div>
         </section>
         <section class="game-play">
-            <h2 class="winner">paper covers rock, You win!</h2>
+            <h2 class="winner">Let start playing</h2>
             <div class="choices">
-                <div class="option rock">
+                <div class="option rock" value="rock">
                     <img src="https://hugoroca.github.io/game-n1/images/rock.png" alt="Rock">
                     <p class="op-title">Rock</p>
                 </div>
-                <div class="option paper">
+                <div class="option paper" value="paper">
                     <img src="https://hugoroca.github.io/game-n1/images/paper.png" alt="Paper">
                     <p class="op-title">Paper</p>
                 </div>
-                <div class="option scissor">
+                <div class="option scissor" value="scissor">
                     <img src="https://hugoroca.github.io/game-n1/images/scissors.png" alt="Scissor">
                     <p class="op-title">Scissor</p>
                 </div>
             </div>
             <p class="make-move">Make your move.</p>
+            <div class="reset">
+                <button type="button" class="reset-btn">
+                    Restart
+                </button>
+            </div>
         </section>
     </div>
+    <script src="stone.js"></script>
 </body>
 
 </html>
